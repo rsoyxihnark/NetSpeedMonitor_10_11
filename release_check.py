@@ -69,7 +69,7 @@ def check(sha):
 
 
 def main():
-    before, after = sys.argv[1], sys.argv[2]
+    before, after = sys.argv[1], git("rev-parse", sys.argv[2]).strip()
     if not before or set(before) == {"0"}:
         shas = [after]
     else:
