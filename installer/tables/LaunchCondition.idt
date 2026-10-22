@@ -1,0 +1,7 @@
+Condition	Description
+s255	l255
+LaunchCondition	Condition
+NOT NEWERVERSIONDETECTED	A later version of [ProductName] is already installed
+Privileged	An administrator must approve or install [ProductName]
+(VersionNT = 501) OR (VersionNT = 502) OR (VersionNT = 600) OR (VersionNT = 601)	Operating System not supported (Windows XP, Windows Server 2003, Windows Vista, or Windows 7)
+NOT NSIS_INSTALLDIR	Setup detected on older version which does not support upgrading! Since version 2.4.1 NetSpeedMonitor uses Windows Installer (msi) which has a lot of advantages. You have to uninstall the old deprecated version before you can install this version.

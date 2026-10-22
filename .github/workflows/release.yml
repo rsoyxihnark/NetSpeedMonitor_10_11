@@ -1,0 +1,41 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Install build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y msitools gcab
+          python3 -m venv .venv
+          .venv/bin/pip install --disable-pip-version-check -r requirements.txt
+
+      - name: Check the pushed commits
+        id: check
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: .venv/bin/python release_check.py "$BEFORE" "$GITHUB_SHA"
+
+      - name: Build
+        id: build
+        run: echo "msi=$(.venv/bin/python build.py)" >> "$GITHUB_OUTPUT"
+
+      - name: Publish
+        if: steps.check.outputs.version != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.check.outputs.version }}
+          MSI: ${{ steps.build.outputs.msi }}
+        run: gh release create "v$VERSION" "$MSI" --target "$GITHUB_SHA" --title "NetSpeedMonitor $VERSION" --notes-file release-notes.md

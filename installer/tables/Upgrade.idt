@@ -1,0 +1,5 @@
+UpgradeCode	VersionMin	VersionMax	Language	Attributes	Remove	ActionProperty
+s38	S20	S20	S255	i4	S255	s72
+Upgrade	UpgradeCode	VersionMin	VersionMax	Language	Attributes
+{300ABC28-15A2-421C-A3ED-F50FD547A17D}	@VERSION@			258		NEWERVERSIONDETECTED
+{300ABC28-15A2-421C-A3ED-F50FD547A17D}	1.0.0.0	@VERSION@		257		OLDERVERSIONBEINGUPGRADED

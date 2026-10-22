@@ -1,0 +1,20 @@
+Property	Value
+s72	l0
+Property	Property
+UpgradeCode	{300ABC28-15A2-421C-A3ED-F50FD547A17D}
+WixUIRMOption	UseRM
+Manufacturer	Florian Gilles
+ProductCode	@PRODUCTCODE@
+ProductLanguage	1033
+ProductName	NetSpeedMonitor @VERSION@ x64
+ProductVersion	@VERSION@
+ARPHELPLINK	http://www.floriangilles.com
+ARPPRODUCTICON	MyIcon
+ARPURLINFOABOUT	http://www.floriangilles.com
+ARPURLUPDATEINFO	http://www.floriangilles.com
+WIXUI_INSTALLDIR	PRODUCTDIR
+WixShellExecTarget	http://www.floriangilles.com/software/donate/
+DefaultUIFont	WixUI_Font_Normal
+WixUI_Mode	FeatureTree
+ErrorDialog	ErrorDlg
+SecureCustomProperties	NEWERVERSIONDETECTED;OLDERVERSIONBEINGUPGRADED

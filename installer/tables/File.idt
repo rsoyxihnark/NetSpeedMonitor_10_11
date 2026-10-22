@@ -1,0 +1,11 @@
+File	Component_	FileName	FileSize	Version	Language	Attributes	Sequence
+s72	s72	l255	i4	S72	S20	I2	i4
+File	File
+core_dll_501_x64	Core501	nsm.dll	@SIZE@	@FILEVERSION@	1033	1536	1
+core_dll_502_x64	Core502	nsm.dll	@SIZE@	@FILEVERSION@	1033	1536	2
+core_dll_600_x64	Core600	nsm.dll	@SIZE@	@FILEVERSION@	1033	1536	3
+core_dll_601_x64	Core601	nsm.dll	@SIZE@	@FILEVERSION@	1033	1536	4
+core_exe_501_x64	Core501	nsmc.exe	@SIZE@	@FILEVERSION@	1033	1536	5
+core_exe_502_x64	Core502	nsmc.exe	@SIZE@	@FILEVERSION@	1033	1536	6
+core_exe_600_x64	Core600	nsmc.exe	@SIZE@	@FILEVERSION@	1033	1536	7
+core_exe_601_x64	Core601	nsmc.exe	@SIZE@	@FILEVERSION@	1033	1536	8

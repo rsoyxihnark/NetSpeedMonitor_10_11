@@ -1,0 +1,17 @@
+PropertyId	Value
+i2	l255
+_SummaryInformation	PropertyId
+1	1252
+2	Installation Database
+3	NetSpeedMonitor
+4	Florian Gilles
+5	Installer
+6	This installer database contains the logic and data required to install NetSpeedMonitor @VERSION@ x64.
+7	x64;1033
+9	@PACKAGECODE@
+12	@TIMESTAMP@
+13	@TIMESTAMP@
+14	300
+15	2
+18	Windows Installer XML (3.5.1505.0)
+19	2

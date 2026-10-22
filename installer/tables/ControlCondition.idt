@@ -1,0 +1,58 @@
+Dialog_	Control_	Action	Condition
+s72	s50	s50	s255
+ControlCondition	Dialog_	Control_	Action	Condition
+ExitDialog	OptionalCheckBox	Show	WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT AND NOT Installed
+ExitDialog	OptionalText	Show	WIXUI_EXITDIALOGOPTIONALTEXT AND NOT Installed
+ProgressDlg	TextInstalling	Show	NOT Installed OR (Installed AND (RESUME OR Preselected) AND NOT PATCH)
+ProgressDlg	TitleInstalling	Show	NOT Installed OR (Installed AND (RESUME OR Preselected) AND NOT PATCH)
+ProgressDlg	TextChanging	Show	WixUI_InstallMode = "Change"
+ProgressDlg	TitleChanging	Show	WixUI_InstallMode = "Change"
+ProgressDlg	TextRepairing	Show	WixUI_InstallMode = "Repair"
+ProgressDlg	TitleRepairing	Show	WixUI_InstallMode = "Repair"
+ProgressDlg	TextRemoving	Show	WixUI_InstallMode = "Remove"
+ProgressDlg	TitleRemoving	Show	WixUI_InstallMode = "Remove"
+ResumeDlg	Install	Show	ALLUSERS
+ResumeDlg	InstallNoShield	Show	NOT ALLUSERS
+LicenseAgreementDlg	Next	Disable	LicenseAccepted <> "1"
+LicenseAgreementDlg	Next	Enable	LicenseAccepted = "1"
+CustomizeDlg	Browse	Disable	Installed
+CustomizeDlg	Browse	Hide	Installed
+CustomizeDlg	Location	Hide	Installed
+CustomizeDlg	LocationLabel	Hide	Installed
+MaintenanceTypeDlg	ChangeButton	Disable	ARPNOMODIFY
+MaintenanceTypeDlg	RepairButton	Disable	ARPNOREPAIR
+MaintenanceTypeDlg	ChangeText	Hide	ARPNOMODIFY
+MaintenanceTypeDlg	ChangeDisabledText	Show	ARPNOMODIFY
+MaintenanceTypeDlg	RemoveButton	Disable	ARPNOREMOVE
+MaintenanceTypeDlg	RepairText	Hide	ARPNOREPAIR
+MaintenanceTypeDlg	RepairDisabledText	Show	ARPNOREPAIR
+MaintenanceTypeDlg	RemoveText	Hide	ARPNOREMOVE
+MaintenanceTypeDlg	RemoveDisabledText	Show	ARPNOREMOVE
+VerifyReadyDlg	Remove	Show	WixUI_InstallMode = "Remove" AND ALLUSERS
+VerifyReadyDlg	Remove	Enable	WixUI_InstallMode = "Remove"
+VerifyReadyDlg	Back	Default	WixUI_InstallMode = "Remove"
+VerifyReadyDlg	Install	Show	NOT Installed AND ALLUSERS
+VerifyReadyDlg	Install	Enable	NOT Installed
+VerifyReadyDlg	Install	Default	NOT Installed
+VerifyReadyDlg	InstallNoShield	Show	NOT Installed AND NOT ALLUSERS
+VerifyReadyDlg	InstallNoShield	Enable	NOT Installed
+VerifyReadyDlg	InstallNoShield	Default	NOT Installed
+VerifyReadyDlg	ChangeText	Show	WixUI_InstallMode = "Change"
+VerifyReadyDlg	RepairText	Show	WixUI_InstallMode = "Repair"
+VerifyReadyDlg	RemoveText	Show	WixUI_InstallMode = "Remove"
+VerifyReadyDlg	Change	Show	WixUI_InstallMode = "Change" AND ALLUSERS AND (ADDLOCAL OR REMOVE)
+VerifyReadyDlg	Change	Enable	WixUI_InstallMode = "Change"
+VerifyReadyDlg	Change	Default	WixUI_InstallMode = "Change"
+VerifyReadyDlg	ChangeNoShield	Show	WixUI_InstallMode = "Change" AND (NOT ALLUSERS OR (NOT ADDLOCAL AND NOT REMOVE))
+VerifyReadyDlg	ChangeNoShield	Enable	WixUI_InstallMode = "Change"
+VerifyReadyDlg	ChangeNoShield	Default	WixUI_InstallMode = "Change"
+VerifyReadyDlg	Repair	Show	WixUI_InstallMode = "Repair"
+VerifyReadyDlg	Repair	Enable	WixUI_InstallMode = "Repair"
+VerifyReadyDlg	Repair	Default	WixUI_InstallMode = "Repair"
+VerifyReadyDlg	RemoveNoShield	Show	WixUI_InstallMode = "Remove" AND NOT ALLUSERS
+VerifyReadyDlg	RemoveNoShield	Enable	WixUI_InstallMode = "Remove"
+VerifyReadyDlg	InstallTitle	Show	NOT Installed
+VerifyReadyDlg	InstallText	Show	NOT Installed
+VerifyReadyDlg	ChangeTitle	Show	WixUI_InstallMode = "Change"
+VerifyReadyDlg	RepairTitle	Show	WixUI_InstallMode = "Repair"
+VerifyReadyDlg	RemoveTitle	Show	WixUI_InstallMode = "Remove"
